@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Prevent scrolling when projectiles move */
+}
+#knife {/* Temporary border to debug positioning */
+}
+#score {
+    position: absolute; /* Ensure it is positioned within the viewport */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    font-size: 20px;
+    color: black; /* Ensure the text is visible */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+.center-dot {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    animation: rotateKnife 5s infinite linear;
+}
+
+.red-dot {
+    width: 10px; /* Adjust size as needed */
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.orbit {
+    margin: 0px;
+    position: absolute;
+    width: 300px;
+    
+    height: 300px;
+    animation: revolve 5s infinite linear;
+}
+
+.orbit img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.projectile {
+    margin: 0px;
+    width: 10px;
+    height: 10px;
+    border: 3px solid purple;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: transform 1s linear;
+}
+
+@keyframes rotateKnife {
+    0% {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+}
+
+@keyframes revolve {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+

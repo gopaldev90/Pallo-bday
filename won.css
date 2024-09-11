@@ -1,0 +1,25 @@
+body{
+  align-content: center;
+  background-color: #3f0d82
+}
+#Badhailbl {
+  height: 45px;
+  width: 276px;
+  color: #53c80c;
+  margin: 1px;
+  padding: 4px
+}
+
+#soochna{
+  color: #ca6d0c;
+  display: block;  /* Makes the label behave like a block element */
+  max-width: 100%; /* Ensures it doesn't overflow its container */
+  word-wrap: break-word; /* Allows text to break into multiple lines */
+}
+#vc{
+  color: #ffffff;
+  display: block;
+  max-width: 100%;
+  padding: 85px;
+  word-wrap: break-word;
+}
